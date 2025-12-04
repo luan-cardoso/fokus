@@ -1,9 +1,11 @@
-import { Pressable, StyleSheet, Text } from "react-native"
+import { Pressable, StyleSheet } from "react-native"
+import { FokusText } from "../FokusText"
 
-export const FokusButton = () => {
+export const FokusButton = ({ onPress, title, icon }) => {
     return (
-        <Pressable style={styles.button}>
-            <Text style={styles.buttonText}>Começar</Text>
+        <Pressable style={styles.button} onPress={onPress}>
+            {icon}
+            <FokusText style={styles.buttonText}>{title}</FokusText>
         </Pressable>
     )
 }
@@ -15,11 +17,12 @@ const styles = StyleSheet.create({
       borderRadius: 6,
       alignItems: "center",
       justifyContent: "center",
+      flexDirection: 'row',
+      gap: 12,
     },
     buttonText: {
       textAlign: "center",
       fontSize: 16,
       color: "#161616",
-      fontFamily:"JetBrainsMono_500Medium",
     }
   })

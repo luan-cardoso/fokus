@@ -1,4 +1,5 @@
-import { Pressable, StyleSheet, Text } from "react-native"
+import { Pressable, StyleSheet } from "react-native"
+import { FokusText } from "../FokusText"
 
 export const ActionButton = ({ active, onPress, display }) => {
     return (
@@ -6,9 +7,9 @@ export const ActionButton = ({ active, onPress, display }) => {
             style={active ? styles.contextButtonActive : null}
             onPress={onPress}
         >
-            <Text style={[styles.contextButtonText, active && { color: "#161616" }]}>
+            <FokusText style={[styles.contextButtonText, active && { color: "#161616" }]}>
                 {display}
-            </Text>
+            </FokusText>
         </Pressable>
     )
 }
@@ -22,6 +23,5 @@ const styles = StyleSheet.create({
       fontSize: 12,
       color: "#d2d2d2",
       padding: 8,
-      fontFamily:"JetBrainsMono_500Medium",
     },
   })

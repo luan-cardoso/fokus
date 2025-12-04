@@ -1,4 +1,5 @@
-import { StyleSheet, Text } from "react-native"
+import { StyleSheet } from "react-native"
+import { FokusText } from "../FokusText"
 
 export const Timer = ({ totalSeconds }) => {
 
@@ -6,9 +7,9 @@ export const Timer = ({ totalSeconds }) => {
     const options = {minute: '2-digit', second: '2-digit'}
 
     return (
-        <Text style={styles.timer}>
+        <FokusText style={styles.timer}>
             {date.toLocaleTimeString('pt-BR', options)}
-        </Text>
+        </FokusText>
     )
 }
 
@@ -17,7 +18,6 @@ const styles = StyleSheet.create({
       color: "#d2d2d2",
       fontSize: 48,
       fontWeight: "bold",
-      fontFamily:"JetBrainsMono_500Medium",
       textAlign: "center",
     },
   })
